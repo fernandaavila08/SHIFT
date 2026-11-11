@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dw4t0wy4nmvkl"]
+
+[ext_resource type="Script" uid="uid://ggivcggs8uat" path="res://la_chica_de_pelo_morado.gd" id="1_rkt0w"]
+[ext_resource type="Texture2D" uid="uid://d3a3xuls2snj0" path="res://chicapelomorado.png" id="2_tqls3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w8wy8"]
+size = Vector2(239.29889, 74)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w8wy8"]
+radius = 89.505775
+height = 860.6324
+
+[node name="LaChicaDePeloMorado" type="CharacterBody2D" unique_id=1430884100]
+position = Vector2(0, 75)
+scale = Vector2(0.29048407, 0.29048407)
+script = ExtResource("1_rkt0w")
+
+[node name="Chicapelomorado" type="Sprite2D" parent="." unique_id=392729875]
+position = Vector2(68.296, 184.87793)
+scale = Vector2(0.97527057, 0.9048616)
+texture = ExtResource("2_tqls3")
+region_enabled = true
+region_rect = Rect2(781, 77, 340, 992)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1050763848]
+position = Vector2(93.7874, 585.2301)
+shape = SubResource("RectangleShape2D_w8wy8")
+debug_color = Color(0.7624145, 0.17642674, 0.9999998, 0.41960785)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=870169850]
+position = Vector2(61.965515, 172.12646)
+shape = SubResource("CapsuleShape2D_w8wy8")
+debug_color = Color(0.82266366, 0.0011412763, 0.9094832, 0.41960785)
