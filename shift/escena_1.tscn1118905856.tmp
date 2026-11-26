@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://dsti2wj7feeb6"]
+
+[ext_resource type="Script" uid="uid://8dcv1skhvs2y" path="res://escena_1.gd" id="1_8ql8h"]
+[ext_resource type="Texture2D" uid="uid://cf6muow8gcqra" path="res://assets_cuarto/Fondo cuarto .png" id="2_24rbx"]
+[ext_resource type="PackedScene" uid="uid://dw4t0wy4nmvkl" path="res://la_chica_de_pelo_morado.tscn" id="2_idoxx"]
+[ext_resource type="Texture2D" uid="uid://hqk2a23n8axn" path="res://assets_cuarto/Cuarto armario.png" id="3_xk1ck"]
+[ext_resource type="Texture2D" uid="uid://oy3itvtbvp14" path="res://assets_cuarto/Cuarto cama .png" id="4_cm6yc"]
+[ext_resource type="Texture2D" uid="uid://cgmd2jyygqqj0" path="res://assets_cuarto/Cuarto posters .png" id="5_qphut"]
+[ext_resource type="Texture2D" uid="uid://d2s11m16506w8" path="res://assets_cuarto/Cuarto ventana .png" id="6_acn6v"]
+[ext_resource type="Texture2D" uid="uid://bfvu2pqvq2nnx" path="res://assets_cuarto/Cuarto pc .png" id="8_ax42s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w8wy8"]
+size = Vector2(32.58224, 98)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bre4h"]
+size = Vector2(372, 537)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1f300"]
+size = Vector2(502, 476)
+
+[node name="escena1" type="Node2D" unique_id=1998688019]
+script = ExtResource("1_8ql8h")
+
+[node name="Cuarto" type="Sprite2D" parent="." unique_id=1917978907]
+position = Vector2(18.999958, 259.99997)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("2_24rbx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Cuarto" unique_id=1841196178]
+texture = ExtResource("3_xk1ck")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Cuarto" unique_id=1181074243]
+texture = ExtResource("4_cm6yc")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Cuarto" unique_id=2068153777]
+texture = ExtResource("5_qphut")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Cuarto" unique_id=150697780]
+texture = ExtResource("6_acn6v")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1038044836]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2055472487]
+position = Vector2(59.50002, 672)
+scale = Vector2(42.937504, 1)
+shape = SubResource("RectangleShape2D_w8wy8")
+
+[node name="Camera2D" type="Camera2D" parent="StaticBody2D" unique_id=1846054432]
+position = Vector2(20, 261)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1614459112]
+position = Vector2(255, 203.5)
+shape = SubResource("RectangleShape2D_bre4h")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=952829466]
+position = Vector2(-156, 167)
+shape = SubResource("RectangleShape2D_1f300")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=732787478]
+polygon = PackedVector2Array(-567, 592, -352, 320, -357, -69, -570, -69)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1393189020]
+polygon = PackedVector2Array(379, -82, 384, 368, 638, 636, 628, -72)
+
+[node name="LaChicaDePeloMorado" parent="." unique_id=1430884100 instance=ExtResource("2_idoxx")]
+position = Vector2(-465, 552)
+scale = Vector2(0.4, 0.4)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1367327281]
+position = Vector2(-95.20524, 263.00003)
+scale = Vector2(0.28020564, 0.28020567)
+texture = ExtResource("8_ax42s")

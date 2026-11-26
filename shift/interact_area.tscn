@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dq0o7s7g28rsx"]
+
+[ext_resource type="Script" uid="uid://cxs0gddv2q81v" path="res://interact_area.gd" id="1_uhhki"]
+[ext_resource type="Texture2D" uid="uid://ukk8a410omt3" path="res://interact_ph.png" id="2_0esam"]
+
+[node name="InteractArea" type="Area2D" unique_id=1336526434]
+script = ExtResource("1_uhhki")
+
+[node name="MyButton" type="Button" parent="." unique_id=1502385229]
+offset_left = -99.0
+offset_top = -94.0
+offset_right = 90.0
+offset_bottom = 95.0
+icon = ExtResource("2_0esam")
+flat = true
+expand_icon = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="pressed" from="MyButton" to="." method="_on_button_pressed"]
